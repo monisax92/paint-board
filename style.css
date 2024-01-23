@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 2rem;
+	background-color: #303040;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center;*/
+	/* height: 100vh; */
+}
+
+.wrapper-btns {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 3rem;
+}
+
+.buttons-group {
+	margin: 0 2em;
+}
+
+h2,
+.slider-box p {
+	color: #fab042;
+	text-align: center;
+	margin-bottom: 1rem;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+
+.btn {
+	border-radius: 3px;
+	border: #fab042 solid 1px;
+	background-color: transparent;
+	color: #fab042;
+	padding: 10px 20px;
+	font-size: 0.75rem;
+	font-weight: 100;
+	letter-spacing: 3px;
+	margin: 0.5em 0.5em;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: #fab042;
+		color: #303040;
+	}
+}
+
+.btn-active {
+	background-color: #fab042;
+	color: #303040;
+}
+
+/* label{
+  color: #fab042;
+  font-size: 1.5rem;
+  font-weight: bold;
+} */
+
+.slider-box {
+	margin-bottom: 2rem;
+
+	p {
+		color: #fab042;
+	}
+}
+
+.slider {
+	width: 400px;
+}
+
+.board {
+	display: flex;
+	justify-content: center;
+	/* align-items: center;*/
+	flex-wrap: wrap;
+	width: 520px;
+
+	transition-property: background-color;
+	transition-duration: 0.3s;
+}
+
+.square {
+	height: 22px;
+	width: 22px;
+	border: grey solid 1px;
+	border-radius: 5px;
+	margin: 2px;
+	transition: background-color 3s;
+
+	&:hover {
+		/*to make color appear directly after hover but disappear in 3s or so*/
+		transition-duration: 0s !important;
+		/*important is needed because of inline styling added by js*/
+	}
+}
+
+@media (max-width: 1030px) {
+	.btn {
+		padding: 5px 10px;
+	}
+}

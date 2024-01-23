@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Paint Board</title>
+</head>
+<body>
+  <div class="wrapper-btns">
+  <div class="buttons-group">
+    <h2>animation speed:</h2>
+    <button class="btn" data-setting="speed" data-speed="10"> slow </button>
+    <button class="btn btn-active" data-setting="speed" data-speed="5"> normal </button>
+    <button class="btn" data-setting="speed" data-speed=".5"> fast </button>
+  </div>
+  
+  <div class="buttons-group">
+    <h2>color range:</h2>
+    <button class="btn" data-setting="hue" data-hue=0> redish </button> <!-- [0, 60) -->
+    <button class="btn" data-setting="hue" data-hue=100> greenish </button> <!-- [100, 160) -->
+    <button class="btn" data-setting="hue" data-hue=200> blueish </button> <!-- [200, 260) -->
+    <button class="btn btn-active" data-setting="hue" data-hue=360> all colors </button> <!-- [0, 360) -->
+  </div>
+</div>
+
+<div class="slider-box">
+  <input type="range" min="0" max="100" value="70" id="slider" class="slider"/>
+  <p> saturation: <span class="slider-value">70</span>%<p>
+</div>
+
+<div class="board">
+</div>
+<script src="app.js"></script>
+</body>
+</html>
